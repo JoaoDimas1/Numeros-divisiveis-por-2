@@ -1,0 +1,21 @@
+#include <stdio.h>
+#include <locale.h>
+
+int main() {
+    setlocale (LC_ALL, "portuguese"); // Configura a localização para exibir mensagens em português
+    int i, contador = 0; // Declaração das variáveis 'i' e 'contador', inicializando 'contador' como zero
+
+    printf ("Contador de numeros divisiveis por 2 entre 10 e 50.\n"); // Mensagem inicial
+
+    // Loop for para iterar de 10 a 50
+    for (i = 10; i <= 50; i++) {
+        if (i % 2 == 0) { // Verifica se 'i' é divisível por 2 (se é par)
+            printf ("%d\n", i); // Se sim, imprime 'i'
+            contador++; // Incrementa o contador de números exibidos
+        }
+        i++; // Incrementa 'i' independentemente se 'i' é par ou ímpar, o que o torna inconsistente
+    } 
+
+    printf ("Total de numeros exibidos: %d", contador); // Imprime o total de números exibidos
+    return 0; // Retorna 0 para indicar que o programa foi executado com sucesso
+}
